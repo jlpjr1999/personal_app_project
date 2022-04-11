@@ -18,3 +18,6 @@ class Person:
         Args:
             Person2 (Person): the other person to connect to.
         """
+        if other not in self.connections:
+            self.connections.add(other)
+            other.connect(self)
