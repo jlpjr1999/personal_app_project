@@ -12,11 +12,14 @@ class Person:
         self.name = name
         self.connections = set()
     
-    def connect(self, person2):
-        """ Connect with person2. 
+    def connect(self, other):
+        """ Create a symmetrical connection to another Person object.
         
         Args:
-            Person2 (Person): the other person to connect to.
+            other (Person): another Person object.
+            
+        Side effects:
+            Modifies self.connections and other.connections.
         """
         if other not in self.connections:
             self.connections.add(other)
